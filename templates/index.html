@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midpoint Calculator</title>
+</head>
+<body>
+    <h1>Select people:</h1>
+    <form action="/calculate_midpoint" method="post">
+        {% for name, address in addresses.items() %}
+            <input type="checkbox" name="selected_people" value="{{ name }}">{{ name }}<br>
+        {% endfor %}
+        <input type="submit" value="Calculate Midpoint">
+    </form>
+</body>
+</html>
